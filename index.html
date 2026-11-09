@@ -82,6 +82,25 @@ fbq('track','PageView');
   .trust div + div{border-left:1px solid var(--line)}
   .trust svg{display:block;width:22px;height:22px;margin:0 auto 8px;stroke:var(--teal-dark);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
   footer{padding:14px 18px 22px;text-align:center;font-size:11px;color:#8a9aa1;line-height:1.5}
+
+  @media (min-width: 900px){
+    html,body{background:linear-gradient(180deg,#eaf6f8 0%,#f4f8f9 60%)}
+    body{padding:40px 24px}
+    .wrap{max-width:1000px;min-height:auto;border-radius:22px;overflow:hidden;
+          box-shadow:0 20px 60px rgba(13,43,54,.12);padding-bottom:0}
+    header{padding:18px 32px}
+    .hero{aspect-ratio:1734/907}
+    main{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:32px 40px 16px}
+    h1{font-size:30px}
+    .sub{font-size:15px;max-width:400px}
+    .chips{flex-wrap:wrap;overflow:visible}
+    form{margin-top:0}
+    .bar{position:static;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border:0;padding:16px 0 0}
+    .bar-in{max-width:none}
+    .bar .note{text-align:left}
+    .trust{margin-top:22px}
+    footer{padding:0 40px 26px;text-align:left}
+  }
 </style>
 </head>
 <body>
@@ -96,11 +115,14 @@ fbq('track','PageView');
   <img id="hero" class="hero" alt="">
 
   <main>
+   <div class="info">
     <h1 id="title">Encuentra tu dentista</h1>
     <span id="price" class="price"></span>
     <p id="sub" class="sub"></p>
 
     <div class="chips" role="group" aria-label="Tratamiento" id="chips"></div>
+   </div>
+   <div class="formcol">
 
     <form id="f" novalidate>
       <div id="g-name">
@@ -119,17 +141,6 @@ fbq('track','PageView');
       </div>
 
     </form>
-
-    <div class="trust">
-      <div><svg viewBox="0 0 24 24"><path d="M19 10c0 5-5.5 10.2-6.4 11a.9.9 0 0 1-1.2 0C10.5 20.2 5 15 5 10a7 7 0 0 1 14 0z"/><circle cx="12" cy="10" r="2.5"/></svg>Dentistas en tu zona</div>
-      <div><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01" stroke-width="2"/></svg>Horarios flexibles</div>
-      <div><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2.5 21.5z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2"/></svg>Atención por WhatsApp</div>
-    </div>
-  </main>
-
-  <footer>Te contaremos todos los detalles por WhatsApp.</footer>
-</div>
-
 <div class="bar">
   <div class="bar-in">
     <button class="cta" type="submit" form="f">
@@ -139,6 +150,18 @@ fbq('track','PageView');
     <p class="note">Guardamos tu nombre y sucursal solo para contactarte. Se abrirá WhatsApp con tu mensaje listo.</p>
   </div>
 </div>
+
+    <div class="trust">
+      <div><svg viewBox="0 0 24 24"><path d="M19 10c0 5-5.5 10.2-6.4 11a.9.9 0 0 1-1.2 0C10.5 20.2 5 15 5 10a7 7 0 0 1 14 0z"/><circle cx="12" cy="10" r="2.5"/></svg>Dentistas en tu zona</div>
+      <div><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01" stroke-width="2"/></svg>Horarios flexibles</div>
+      <div><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2.5 21.5z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2"/></svg>Atención por WhatsApp</div>
+    </div>
+   </div>
+  </main>
+
+  <footer>Te contaremos todos los detalles por WhatsApp.</footer>
+</div>
+
 
 <script>
   const WA_NUMBER = '56957971258';
